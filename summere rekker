@@ -1,0 +1,9 @@
+sum = 0
+ 
+start = 3
+slutt = 7
+slutt += 1
+ 
+for i in range(start, slutt):
+    sum += (i**2) - 1 #funksjon for rekke
+    print(sum)
