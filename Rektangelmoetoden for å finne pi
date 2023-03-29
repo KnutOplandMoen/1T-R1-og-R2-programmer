@@ -1,0 +1,36 @@
+from pylab import *
+from math import *
+ 
+def f(x):           #definerer en funskjon f(x)
+    return math.sqrt(1-x**2) 
+ 
+offsett = 0.5
+ 
+a = -1 #nedre grense
+b = 1  #øvre grense
+N = 100 #antall rektangler
+dx = (b-a)/N    #bredde rektangler
+ 
+xliste = []
+yliste = []
+ 
+x = a
+h = f(x)
+ 
+S = 0   #integralsummen
+for n in range(N):
+    x = a + n*dx 
+    h = f(x)    #høyde rektangel n
+    A = dx * h  #areal rektangel n
+    S += A  #legger til arealet i summen
+    xliste.append(x)
+    yliste.append(h)
+    
+print(f'Rektangelmetoden gir: {S:.10f}') #Skriver ut summen av rektangelarealene
+print('\npi ifølge prog: ', S*2)
+print('reel pi:        ', math.pi)
+print('\ndifferanse mellom reel og prog: ', math.pi - S*2)
+ 
+ 
+plot(xliste,yliste)
+grid()
