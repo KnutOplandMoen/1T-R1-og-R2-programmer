@@ -1,0 +1,26 @@
+from pylab import *
+ 
+def f(x):           #definerer en funskjon f(x)
+    return x**2 + 1
+ 
+a = 0  #nedre grense
+b = 4  #øvre grense
+N = 1000000 #antall rektangler
+dx = (b-a)/N    #bredde rektangler
+ 
+xliste = []
+yliste = []
+ 
+S = 0   #integralsummen
+for n in range(N):
+    x = a + n*dx 
+    h = f(x)    #høyde rektangel n
+    A = dx * h  #areal rektangel n
+    S += A  #legger til arealet i summen
+    xliste.append(x)
+    yliste.append(h)
+    
+print(f'Rektangelmetoden gir: {S:.3f}') #Skriver ut summen av rektangelarealene
+ 
+plot(xliste,yliste)
+grid()
