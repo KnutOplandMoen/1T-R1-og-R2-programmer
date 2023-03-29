@@ -1,0 +1,13 @@
+sumkvadrat = 0
+sumoddetall = 0
+ 
+start = 1
+slutt = 11
+ 
+for i in range(start, slutt):
+    sumkvadrat += i**2
+    sumoddetall += 2*i - 1
+ 
+print(sumkvadrat)
+print(sumoddetall)
+print('differanse: ', sumkvadrat - sumoddetall)  
