@@ -1,0 +1,20 @@
+from math import *
+
+def f(x):
+  return x + 3
+ 
+a = 0
+b = 1
+N = 1000
+
+dx = (b-a)/N
+
+V = 0
+x = a
+
+while x <= b:
+  v = pi * f(x)**2*dx
+  V += v
+  x += dx
+  
+print(V)
