@@ -1,0 +1,12 @@
+import math
+
+koordinatlinje = [1, 0, 0]
+retningsvektorlinje = [2, 5, 6]
+
+d = retningsvektorlinje[0] * koordinatlinje[0] + retningsvektorlinje[1] * koordinatlinje[1] + retningsvektorlinje[2] * koordinatlinje[2]  
+
+koordinatpunkt = [6, 5, 8]
+
+distanse = (retningsvektorlinje[0]*koordinatpunkt[0] + retningsvektorlinje[1]*koordinatpunkt[1] + retningsvektorlinje[2]*koordinatpunkt[2] + d)/math.sqrt(retningsvektorlinje[0]**2+retningsvektorlinje[1]**2+retningsvektorlinje[2]**2)
+
+print(distanse)
