@@ -1,0 +1,19 @@
+from pylab import *
+from scipy.optimize import curve_fit 
+data = loadtxt("heis.txt", delimiter = "\t")
+
+tid = data[:, 0]
+aks= data[:, 1]
+
+def f(t, a, b):
+    return(a*(b**t))
+
+[a, b] = curve_fit(f, tid, aks)[0]
+print('a =', round(a,2),
+      'b =', round(b,2), 
+      'Dette gir modellen y =', round(a,2),'*', round(b,2),'^t')
+
+plot(tid, aks)
+plot(tid, f(tid, a, b))    
+xlabel('tid (s)')
+ylabel('akselerasjon (m/s^2')
