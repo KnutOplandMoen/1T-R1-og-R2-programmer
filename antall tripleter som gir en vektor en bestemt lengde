@@ -1,0 +1,18 @@
+import math
+
+def d(a, b, c):
+    return math.sqrt(a**2 + b**2 + c**2)
+
+antall = 0
+
+for i in range(-25, 25):
+    a = i
+    for k in range(-25, 25):
+        b = k
+        for l in range(-25, 25):
+            c = l
+            if d(a, b, c) == 13
+                antall += 1
+                #print(a, b, c)
+                
+print(antall)
