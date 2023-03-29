@@ -1,0 +1,10 @@
+n = 0 # antall ledd i rekka
+a1 = 1000
+k = 0.9
+sum_rekke = 0
+
+while sum_rekke < 8000:
+  sum_rekke = sum_rekke + a1*k**n
+  n = n + 1
+
+print("Vi må ha minst", n, "ledd.")
